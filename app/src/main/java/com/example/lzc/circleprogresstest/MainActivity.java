@@ -19,6 +19,7 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.tencent.tinker.lib.tinker.TinkerInstaller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        TinkerInstaller.onReceiveUpgradePatch(this,cacheFilePath);
         viewById = (CircularProgressButton) findViewById(R.id.btnWithText);
         viewById.setIndeterminateProgressMode(true);
         Timer timer = new Timer();

@@ -10,16 +10,16 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias '你的签名key的别名'
-            keyPassword '你的签名key的密码'
-            storeFile file('你的签名文件')
-            storePassword '你的签名文件的密码'
+            keyAlias 'myapplication'
+            keyPassword 'myapplication'
+            storeFile file('D:\\keyStore\\myapplication.jks')
+            storePassword 'myapplication'
         }
         debug {
-            keyAlias '你的签名key的别名'
-            keyPassword '你的签名key的密码'
-            storeFile file('你的签名文件')
-            storePassword '你的签名文件的密码'
+            keyAlias 'myapplication'
+            keyPassword 'myapplication'
+            storeFile file('D:\\keyStore\\myapplication.jks')
+            storePassword 'myapplication'
         }
     }
     defaultConfig {
@@ -56,7 +56,9 @@ android {
         }
     }
 }
-
+def releaseTime() {
+    return new Date().format("yyyy_MM_dd")
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
