@@ -1,6 +1,7 @@
 package com.example.lzc.circleprogresstest;
 
 import android.graphics.Color;
+import android.util.Log;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.BarChart;
@@ -38,6 +39,7 @@ public class BarChartManager {
      * 初始化LineChart
      */
     private void initLineChart() {
+        Log.e("", "initLineChart: " );
         //背景颜色
         mBarChart.setBackgroundColor(Color.WHITE);
         //网格
