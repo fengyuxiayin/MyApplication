@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TinkerInstaller.onReceiveUpgradePatch(this, Environment.getDataDirectory().getAbsolutePath()+"/patch_signed.apk");
+        TinkerInstaller.onReceiveUpgradePatch(this, Environment.getExternalStorageDirectory().getAbsolutePath()+"/patch_signed.apk");
         Toast.makeText(this, "补丁生效了哈哈哈", Toast.LENGTH_SHORT).show();
         viewById = (CircularProgressButton) findViewById(R.id.btnWithText);
         viewById.setIndeterminateProgressMode(true);
