@@ -3,6 +3,7 @@ package com.example.lzc.circleprogresstest;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.support.multidex.MultiDex;
 
 import com.tencent.tinker.anno.DefaultLifeCycle;
 import com.tencent.tinker.lib.tinker.TinkerInstaller;
@@ -23,6 +24,7 @@ public class MyApplicationLike extends DefaultApplicationLike {
     @Override
     public void onBaseContextAttached(Context base) {
         super.onBaseContextAttached(base);
+        MultiDex.install(base);
         TinkerInstaller.install(this);
     }
 }
