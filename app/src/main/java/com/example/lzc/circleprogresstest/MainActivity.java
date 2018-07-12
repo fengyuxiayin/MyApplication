@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.dd.CircularProgressButton;
 import com.github.mikephil.charting.animation.Easing;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        TinkerInstaller.onReceiveUpgradePatch(this,cacheFilePath);
+        Toast.makeText(this, "补丁生效了", Toast.LENGTH_SHORT).show();
         viewById = (CircularProgressButton) findViewById(R.id.btnWithText);
         viewById.setIndeterminateProgressMode(true);
         Timer timer = new Timer();
