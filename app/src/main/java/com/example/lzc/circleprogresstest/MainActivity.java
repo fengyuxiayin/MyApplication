@@ -2,6 +2,7 @@ package com.example.lzc.circleprogresstest;
 
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -51,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        TinkerInstaller.onReceiveUpgradePatch(this,cacheFilePath);
-        Toast.makeText(this, "补丁生效了嘛", Toast.LENGTH_SHORT).show();
+        TinkerInstaller.onReceiveUpgradePatch(this, Environment.getDataDirectory().getAbsolutePath()+"/patch_signed.apk");
+//        Toast.makeText(this, "补丁生效了嘛", Toast.LENGTH_SHORT).show();
         viewById = (CircularProgressButton) findViewById(R.id.btnWithText);
         viewById.setIndeterminateProgressMode(true);
         Timer timer = new Timer();
