@@ -103,9 +103,9 @@ def bakPath = file("${buildDir}/bakApk/")
 ext {
     //这个是我自定义打包apk的名字的格式化字符串（关于自定义输出apk文件的名字那些，参考后面的"bak apk and     //mapping"注释那里），这里找到上次编译的apk、mapping、R文件，用来和本次新编译的文件做diff生成补丁包
     def oldPrefixFormat="app_beta1_${appVersionName}_${new Date().format("yyyy_MM_dd")}_%s_build${appVersionCode}_%s"
-    def oldApkPath=String.format(oldPrefixFormat,"17_45_20","tinker.apk")
-    def applyMappingPath=String.format(oldPrefixFormat,"17_45_20","mapping.txt")
-    def resourcePath=String.format(oldPrefixFormat,"17_45_20","R.txt")
+    def oldApkPath=String.format(oldPrefixFormat,"18_16_19","tinker.apk")
+    def applyMappingPath=String.format(oldPrefixFormat,"18_16_19","mapping.txt")
+    def resourcePath=String.format(oldPrefixFormat,"18_16_19","R.txt")
     //for some reason, you may want to ignore tinkerBuild, such as instant run debug build?
     tinkerEnabled = true
 
