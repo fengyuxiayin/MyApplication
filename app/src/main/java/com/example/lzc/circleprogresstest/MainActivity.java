@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        TinkerInstaller.onReceiveUpgradePatch(this,cacheFilePath);
-        Toast.makeText(this, "补丁生效了", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "补丁生效了嘛", Toast.LENGTH_SHORT).show();
         viewById = (CircularProgressButton) findViewById(R.id.btnWithText);
         viewById.setIndeterminateProgressMode(true);
         Timer timer = new Timer();
